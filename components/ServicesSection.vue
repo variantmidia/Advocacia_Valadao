@@ -58,7 +58,7 @@
         <!-- Divider -->
         <div class="services__divider" aria-hidden="true">
           <span class="services__divider-line"></span>
-          <img src="/images/logo.png" alt="" width="48" height="48" class="services__divider-logo" />
+          <span class="services__divider-diamond"></span>
           <span class="services__divider-line"></span>
         </div>
 
@@ -303,11 +303,13 @@ useIntersectionReveal()
   background: linear-gradient(180deg, transparent, var(--color-border), transparent);
 }
 
-.services__divider-logo {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  opacity: 0.6;
+.services__divider-diamond {
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  opacity: 0.55;
 }
 
 /* Família complementar */

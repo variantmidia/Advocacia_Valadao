@@ -439,6 +439,16 @@ onMounted(() => {
 }
 
 /* Responsive */
+@media (min-width: 1440px) {
+  .hero__container {
+    grid-template-columns: 1fr 560px;
+    gap: var(--space-2xl);
+  }
+  .hero__photo-wrap {
+    min-height: 520px;
+  }
+}
+
 @media (max-width: 1100px) {
   .hero__container {
     grid-template-columns: 1fr 360px;

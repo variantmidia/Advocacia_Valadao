@@ -8,7 +8,7 @@
     <div class="container cta__container">
       <div class="cta__ornament reveal" aria-hidden="true">
         <span class="cta__orn-line"></span>
-        <img src="/images/logo.png" alt="" width="40" height="40" class="cta__orn-logo" />
+        <span class="cta__orn-diamond"></span>
         <span class="cta__orn-line"></span>
       </div>
 
@@ -118,10 +118,12 @@ useIntersectionReveal()
   background: linear-gradient(90deg, var(--color-gold), transparent);
 }
 
-.cta__orn-logo {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
+.cta__orn-diamond {
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
   opacity: 0.7;
 }
 

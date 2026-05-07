@@ -53,7 +53,7 @@
             </ul>
 
             <a
-              :href="`https://wa.me/5511947559278?text=${encodeURIComponent('Olá, gostaria de agendar um atendimento na unidade Vila Joaniza.')}`"
+              href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
               target="_blank"
               rel="noopener noreferrer"
               class="office-card__btn btn btn--outline"
@@ -106,7 +106,7 @@
             </ul>
 
             <a
-              :href="`https://wa.me/5511947559278?text=${encodeURIComponent('Olá, gostaria de agendar um atendimento na unidade Balneário São Francisco.')}`"
+              href="https://wa.me/5511942727198?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
               target="_blank"
               rel="noopener noreferrer"
               class="office-card__btn btn btn--outline"
