@@ -7,6 +7,7 @@
       <StatsSection />
       <PreQualSection />
       <AboutSection />
+      <ReviewsSection />
       <ServicesSection />
       <PracticeAreasSection />
       <ProcessSection />

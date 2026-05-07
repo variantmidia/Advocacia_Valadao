@@ -31,11 +31,11 @@
         <ul class="hero__diferencias reveal reveal--delay-3" aria-label="Nossos diferenciais">
           <li class="hero__dif-item">
             <span class="hero__dif-check" aria-hidden="true"></span>
-            Mais de 1.500 casos acompanhados
+            Mais de 2.100 clientes atendidos
           </li>
           <li class="hero__dif-item">
             <span class="hero__dif-check" aria-hidden="true"></span>
-            15 anos de atuação em Direito do Trabalho
+            18 anos de atuação em Direito do Trabalho
           </li>
           <li class="hero__dif-item">
             <span class="hero__dif-check" aria-hidden="true"></span>
@@ -183,6 +183,8 @@ onMounted(() => {
 
 .hero__label {
   animation-delay: 0.1s;
+  font-size: 0.9rem;
+  letter-spacing: 0.22em;
 }
 
 .hero__title {
