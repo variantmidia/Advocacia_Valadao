@@ -47,7 +47,7 @@
             <h3 class="area-card__title">{{ area.title }}</h3>
             <p class="area-card__text">{{ area.desc }}</p>
             <a
-              :href="`https://wa.me/5511947559278?text=${encodeURIComponent(`Olá, preciso de orientação sobre: ${area.title}`)}`"
+              href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
               target="_blank"
               rel="noopener noreferrer"
               class="area-card__link"

@@ -43,7 +43,7 @@
           </ul>
 
           <a
-            :href="`https://wa.me/5511947559278?text=${encodeURIComponent('Olá, preciso de assessoria em Direito do Trabalho.')}`"
+            href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
             target="_blank"
             rel="noopener noreferrer"
             class="services__card-link"
@@ -90,7 +90,7 @@
           </ul>
 
           <a
-            :href="`https://wa.me/5511947559278?text=${encodeURIComponent('Olá, preciso de assessoria em Direito Previdenciário.')}`"
+            href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
             target="_blank"
             rel="noopener noreferrer"
             class="services__card-link"

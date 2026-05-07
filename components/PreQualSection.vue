@@ -34,7 +34,7 @@
             para uma análise precisa.
           </p>
           <a
-            :href="`https://wa.me/5511947559278?text=${encodeURIComponent('Olá, gostaria de avaliar meu caso trabalhista.')}`"
+            href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn--gold btn--lg reveal reveal--delay-3"
