@@ -194,9 +194,9 @@ onMounted(() => {
 }
 
 .hero__title {
-  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 900;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   margin-bottom: var(--space-md);
   display: flex;
   flex-direction: column;
@@ -501,6 +501,11 @@ onMounted(() => {
   .hero__ornament,
   .hero__badge {
     display: none;
+  }
+
+  .hero__title {
+    font-size: clamp(1.35rem, 5.5vw, 1.7rem);
+    align-items: center;
   }
 
   .hero__text {
