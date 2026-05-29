@@ -10,9 +10,9 @@
         <p class="label hero__label reveal">Advocacia Trabalhista &amp; Previdenciária</p>
 
         <h1 class="hero__title reveal reveal--delay-1">
-          <span class="hero__title-line">Seus Direitos</span>
-          <span class="hero__title-line hero__title-line--gold">Trabalhistas</span>
-          <span class="hero__title-line">Protegidos</span>
+          <span class="hero__title-line">Antes de Pedir Demissão,</span>
+          <span class="hero__title-line">Conte com um</span>
+          <span class="hero__title-line hero__title-line--gold">Advogado Trabalhista.</span>
         </h1>
 
         <div class="hero__ornament reveal reveal--delay-2" aria-hidden="true">
@@ -22,9 +22,11 @@
         </div>
 
         <p class="hero__text reveal reveal--delay-3">
-          Se você foi demitido, sofreu acidente, trabalha como MEI ou PJ,
-          ou ainda aguarda um benefício do INSS — seus direitos precisam ser defendidos.
-          Assessoria jurídica dedicada ao trabalhador em São Paulo.
+          Atraso de verbas, FGTS não depositado, acidente de trabalho, assédio...
+          situações como essas podem caracterizar falta grave da empresa — e podem
+          mudar completamente o que você tem direito a receber ao sair.
+          Você não está sozinho. A Advocacia Trabalhista Valadão orienta seu caso
+          para uma rescisão indireta com segurança jurídica.
         </p>
 
         <!-- Diferenciais -->
@@ -39,11 +41,15 @@
           </li>
           <li class="hero__dif-item">
             <span class="hero__dif-check" aria-hidden="true"></span>
-            Duas unidades em São Paulo para atendê-lo
+            Unidades em Vila Joaniza e Balneário São Francisco
           </li>
           <li class="hero__dif-item">
             <span class="hero__dif-check" aria-hidden="true"></span>
             Honorários apenas ao êxito da causa
+          </li>
+          <li class="hero__dif-item">
+            <span class="hero__dif-check" aria-hidden="true"></span>
+            Análise prévia pelo WhatsApp, sem custos
           </li>
         </ul>
 
