@@ -22,11 +22,9 @@
         </div>
 
         <p class="hero__text reveal reveal--delay-3">
-          Atraso de verbas, FGTS não depositado, acidente de trabalho, assédio...
-          situações como essas podem caracterizar falta grave da empresa — e podem
-          mudar completamente o que você tem direito a receber ao sair.
-          Você não está sozinho. A Advocacia Trabalhista Valadão orienta seu caso
-          para uma rescisão indireta com segurança jurídica.
+          Somos especialistas em fazer as empresas pagarem o que é seu por direito — rescisão indireta segura.<br>
+          Às vezes, uma consulta com um Advogado Trabalhista pode mudar completamente o que você tem direito a receber ao sair.<br>
+          Você não está sozinho.
         </p>
 
         <!-- Diferenciais -->
