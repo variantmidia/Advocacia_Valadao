@@ -9,9 +9,9 @@
         <p class="label hero__label reveal">Advogado Previdenciário em São Paulo</p>
 
         <h1 class="hero__title reveal reveal--delay-1">
-          <span class="hero__title-line">Seu Benefício do INSS</span>
-          <span class="hero__title-line">Negado ou Atrasado?</span>
-          <span class="hero__title-line hero__title-line--gold">Você Tem Direito de Recorrer.</span>
+          <span class="hero__title-line">Você Pagou o INSS</span>
+          <span class="hero__title-line">a Vida Toda.</span>
+          <span class="hero__title-line hero__title-line--gold">Se Ele Negou Seu Benefício,<br>É Hora de Recorrer.</span>
         </h1>
 
         <div class="hero__ornament reveal reveal--delay-2" aria-hidden="true">
@@ -21,7 +21,7 @@
         </div>
 
         <p class="hero__text reveal reveal--delay-3">
-          Aposentadoria, auxílio-doença, BPC/LOAS, pensão por morte. A Advocacia Valadão orienta seu caso pelo WhatsApp e acompanha cada etapa do processo junto ao INSS.
+          Aposentadoria negada, BPC/LOAS indeferido, tempo de contribuição não reconhecido — o INSS erra com frequência, e a maioria das pessoas aceita sem questionar. Uma conversa com um advogado previdenciário pode mudar completamente o resultado do seu caso.
         </p>
 
         <ul class="hero__diferencias reveal reveal--delay-3" aria-label="Nossos diferenciais">
@@ -31,15 +31,15 @@
           </li>
           <li class="hero__dif-item">
             <span class="hero__dif-check" aria-hidden="true"></span>
-            18 anos de atuação
+            18 anos de dedicação ao Direito Previdenciário
           </li>
           <li class="hero__dif-item">
             <span class="hero__dif-check" aria-hidden="true"></span>
-            Honorários apenas ao êxito da causa
+            Atendimento pelo WhatsApp — direto e sem burocracia
           </li>
           <li class="hero__dif-item">
             <span class="hero__dif-check" aria-hidden="true"></span>
-            Análise prévia pelo WhatsApp, sem custos
+            Análise prévia do seu caso, sem custos
           </li>
         </ul>
 
@@ -81,15 +81,16 @@
         <div class="hero__photo-glow" aria-hidden="true"></div>
         <div class="hero__photo-border-tl" aria-hidden="true"></div>
         <div class="hero__photo-border-br" aria-hidden="true"></div>
-        <!-- TODO: substituir src pela imagem previdenciário quando Matheus enviar -->
         <img
-          src="/images/hero-worker.webp"
-          alt="Advogado previdenciário — Advocacia Valadão, São Paulo"
+          src="/images/hero-previdenciario.png"
+          alt="Idoso segurando notas de cem reais — Advocacia Valadão Previdenciário, São Paulo"
           class="hero__photo"
           width="560"
           height="420"
           loading="eager"
         />
+        <!-- Fade que integra a imagem ao fundo escuro do site -->
+        <div class="hero__photo-fade" aria-hidden="true"></div>
         <div class="hero__urgency-chip">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
@@ -161,7 +162,7 @@ onMounted(() => {
 
 .hero__container {
   display: grid;
-  grid-template-columns: 1fr 480px;
+  grid-template-columns: 1fr 560px;
   align-items: center;
   gap: var(--space-xl);
   padding-bottom: var(--space-xl);
@@ -303,14 +304,32 @@ onMounted(() => {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  min-height: 460px;
+  min-height: 520px;
 }
 
 .hero__photo-glow {
   position: absolute;
   inset: -20%;
-  background: radial-gradient(ellipse, rgba(196, 160, 74, 0.08) 0%, transparent 65%);
+  background: radial-gradient(ellipse 60% 55% at 68% 42%,
+    rgba(196, 160, 74, 0.18) 0%,
+    rgba(196, 160, 74, 0.07) 40%,
+    transparent 70%
+  );
   pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+/* Fade que integra o fundo cinza da PNG ao dark bg do site */
+.hero__photo-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, transparent 55%, var(--color-bg) 100%),
+    linear-gradient(to left,   transparent 60%, var(--color-bg) 100%),
+    linear-gradient(to top,    transparent 85%, var(--color-bg) 100%);
 }
 
 .hero__photo-border-tl {
@@ -342,15 +361,15 @@ onMounted(() => {
   z-index: 1;
   width: 100%;
   height: 100%;
-  min-height: 460px;
+  min-height: 520px;
   object-fit: cover;
-  object-position: center 40%;
-  filter: brightness(0.88) contrast(1.05);
+  object-position: right top;
+  filter: contrast(1.04);
   transition: filter 0.5s ease;
 }
 
 .hero__photo:hover {
-  filter: brightness(0.95) contrast(1.05);
+  filter: contrast(1.07);
 }
 
 .hero__urgency-chip {
@@ -427,50 +446,70 @@ onMounted(() => {
 
 @media (min-width: 1440px) {
   .hero__container {
-    grid-template-columns: 1fr 560px;
+    grid-template-columns: 1fr 660px;
     gap: var(--space-2xl);
   }
   .hero__photo-wrap {
-    min-height: 520px;
+    min-height: 580px;
+  }
+  .hero__photo {
+    min-height: 580px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero__container {
+    grid-template-columns: 1fr 460px;
   }
 }
 
 @media (max-width: 1100px) {
   .hero__container {
-    grid-template-columns: 1fr 360px;
+    grid-template-columns: 1fr 400px;
   }
 }
 
 @media (max-width: 768px) {
   .hero {
     padding-top: 80px;
-    padding-bottom: var(--space-lg);
+    padding-bottom: 0;
+    min-height: unset;
   }
 
   .hero__container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 0;
+    padding-bottom: 0;
   }
 
   .hero__content {
     max-width: 100%;
     order: 2;
+    padding: var(--space-lg) var(--space-md) var(--space-xl);
   }
 
+  /* Mobile: imagem ocupa largura total e altura proporcional sem overflow */
   .hero__photo-wrap {
     order: 1;
-    min-height: 260px;
-    height: 56vw;
-    max-height: 340px;
-    overflow: hidden;
     width: 100%;
+    min-height: unset;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    overflow: visible;
+    background: transparent;
   }
 
   .hero__photo {
     width: 100%;
     height: 100%;
     min-height: unset;
-    object-position: center 35%;
+    object-position: right top;
+  }
+
+  /* No mobile: sem fade — apenas o brilho dourado do hero__photo-glow permanece */
+  .hero__photo-fade {
+    display: none;
   }
 
   .hero__photo-border-tl,

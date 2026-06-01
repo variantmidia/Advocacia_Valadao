@@ -5,6 +5,7 @@
     <main id="main-content">
       <HeroPrevidenciario />
       <ServicosPrevidenciario />
+      <AboutPrevidenciario />
       <ProcessSection />
       <ReviewsSection />
       <OfficesSection />
