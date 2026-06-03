@@ -5,9 +5,9 @@
     <main id="main-content">
       <HeroTrabalhista />
       <StatsSection />
-      <AboutSection />
-      <PracticeAreasTrabalhista />
       <PreQualSection />
+      <PracticeAreasTrabalhista />
+      <AboutSection />
       <ReviewsSection />
       <ProcessSection />
       <OfficesSection />
