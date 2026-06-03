@@ -47,8 +47,13 @@ const areas = [
     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>',
   },
   {
+    title: 'Adicional de Insalubridade',
+    desc: 'Enfermeiros, auxiliares de limpeza, coletores de lixo, químicos e trabalhadores da construção civil têm direito a 20% ou 40% do salário mínimo por exposição a agentes nocivos à saúde. A maioria nunca recebe.',
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6M10 3v6l-4 9a1 1 0 00.9 1.4h10.2a1 1 0 00.9-1.4l-4-9V3"/><path d="M6.5 14h11"/></svg>',
+  },
+  {
     title: 'Adicional de Periculosidade',
-    desc: 'Trabalhadores expostos a agentes perigosos têm direito ao adicional de periculosidade de 30% sobre o salário base.',
+    desc: 'Eletricistas, vigilantes, operadores de postos de combustível e trabalhadores com explosivos têm direito a 30% sobre o salário base. O adicional é frequentemente sonegado.',
     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
   },
   {
@@ -88,7 +93,7 @@ useIntersectionReveal()
 
 .areas__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--color-border-subtle);
 }
@@ -154,12 +159,6 @@ useIntersectionReveal()
 
 .area-card__link:hover {
   color: var(--color-gold-light);
-}
-
-@media (max-width: 1100px) {
-  .areas__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 @media (max-width: 768px) {
