@@ -1,14 +1,6 @@
 <template>
   <section class="section section--alt areas" aria-labelledby="areas-title">
     <div class="container">
-      <div class="areas__header reveal">
-        <p class="label">Causas que Defendemos</p>
-        <h2 id="areas-title" class="section-title">Direito do Trabalho</h2>
-        <p class="section-subtitle areas__subtitle">
-          Atuação dedicada ao trabalhador — do reconhecimento de vínculo à rescisão indireta segura.
-        </p>
-      </div>
-
       <div class="areas__grid">
         <article
           v-for="(area, idx) in areas"
