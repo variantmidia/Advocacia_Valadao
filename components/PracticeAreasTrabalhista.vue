@@ -1,5 +1,5 @@
 <template>
-  <section class="section section--alt areas" aria-labelledby="areas-title">
+  <section class="section section--alt areas">
     <div class="container">
       <div class="areas__grid">
         <article
@@ -34,12 +34,12 @@ const areas = [
     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 000-8h-1"/><path d="M15 10l4 4-4 4"/><path d="M19 14H8a4 4 0 000 8h1"/></svg>',
   },
   {
-    title: 'Vínculo Empregatício MEI/PJ',
+    title: 'Vínculo MEI/PJ',
     desc: 'Trabalhadores contratados como MEI ou PJ podem ter direito ao reconhecimento de vínculo empregatício com todos os benefícios da CLT.',
     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
   },
   {
-    title: 'Horas Extras e Adicional Noturno',
+    title: 'Horas Extras',
     desc: 'Horas extras trabalhadas e não remuneradas, adicional noturno e intervalos suprimidos geram direito a pagamento retroativo.',
     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>',
   },
@@ -54,7 +54,7 @@ const areas = [
     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
   },
   {
-    title: 'Dano Moral e Assédio',
+    title: 'Dano Moral',
     desc: 'Casos de assédio moral, sexual, humilhação ou ambiente de trabalho degradante dão direito à reparação por danos morais.',
     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 8v4M12 16h.01"/></svg>',
   },
