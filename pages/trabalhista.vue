@@ -8,7 +8,7 @@
       <PreQualSection />
       <AboutSection />
       <ReviewsSection />
-      <ServicesSection />
+      <ServicesSection label="" title="Conheça nossos serviços" subtitle="" />
       <ProcessSection />
       <OfficesSection />
       <PracticeAreasTrabalhista />

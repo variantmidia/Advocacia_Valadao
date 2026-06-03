@@ -2,14 +2,9 @@
   <section class="section services" aria-labelledby="services-title">
     <div class="container">
       <div class="services__header reveal">
-        <p class="label">O que fazemos</p>
-        <h2 id="services-title" class="section-title">
-          Frentes de Atuação Jurídica
-        </h2>
-        <p class="section-subtitle services__subtitle">
-          Especialização em Direito do Trabalho e Previdenciário, com atuação
-          complementar em Direito de Família.
-        </p>
+        <p v-if="label" class="label">{{ label }}</p>
+        <h2 id="services-title" class="section-title">{{ title }}</h2>
+        <p v-if="subtitle" class="section-subtitle services__subtitle">{{ subtitle }}</p>
       </div>
 
       <div class="services__grid">
@@ -126,6 +121,16 @@
 </template>
 
 <script setup lang="ts">
+withDefaults(defineProps<{
+  label?: string
+  title?: string
+  subtitle?: string
+}>(), {
+  label: 'O que fazemos',
+  title: 'Frentes de Atuação Jurídica',
+  subtitle: 'Especialização em Direito do Trabalho e Previdenciário, com atuação complementar em Direito de Família.',
+})
+
 const trabalhista = [
   'Rescisão Indireta',
   'Vínculo Empregatício (MEI e PJ)',
