@@ -1,6 +1,9 @@
 <template>
   <section class="section section--alt areas">
     <div class="container">
+      <div class="areas__header">
+        <h2 class="section-title">Conheça nossos serviços</h2>
+      </div>
       <div class="areas__grid">
         <article
           v-for="(area, idx) in areas"
