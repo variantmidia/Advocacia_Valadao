@@ -5,12 +5,12 @@
     <main id="main-content">
       <HeroTrabalhista />
       <StatsSection />
-      <PreQualSection />
       <AboutSection />
+      <PracticeAreasTrabalhista />
+      <PreQualSection />
       <ReviewsSection />
       <ProcessSection />
       <OfficesSection />
-      <PracticeAreasTrabalhista />
       <CTASection />
     </main>
 
