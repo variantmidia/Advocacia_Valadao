@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer" role="contentinfo">
+  <footer id="rodape" class="footer" role="contentinfo">
     <div class="footer__top-line" aria-hidden="true"></div>
 
     <div class="container footer__container">

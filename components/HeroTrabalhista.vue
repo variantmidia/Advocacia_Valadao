@@ -63,7 +63,7 @@
             </svg>
             Fale pelo WhatsApp
           </a>
-          <a href="#atuacao" class="btn btn--outline btn--lg">
+          <a href="#rodape" class="btn btn--outline btn--lg">
             Áreas de Atuação
           </a>
         </div>

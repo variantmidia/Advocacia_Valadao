@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHeader />
+    <AppHeaderTrabalhista />
 
     <main id="main-content">
       <HeroTrabalhista />
@@ -11,7 +11,7 @@
       <ServicesSection />
       <ProcessSection />
       <OfficesSection />
-      <PracticeAreasSection />
+      <PracticeAreasTrabalhista />
       <CTASection />
     </main>
 
