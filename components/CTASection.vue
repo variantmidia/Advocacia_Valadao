@@ -26,7 +26,7 @@
 
       <div class="cta__actions reveal reveal--delay-3">
         <a
-          href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
+          :href="whatsappHref"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn--gold btn--lg cta__btn-primary"
@@ -37,11 +37,11 @@
           Fale pelo WhatsApp
         </a>
 
-        <a href="tel:+5511947559278" class="btn btn--outline btn--lg cta__btn-secondary">
+        <a :href="phoneHref" class="btn btn--outline btn--lg cta__btn-secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
           </svg>
-          (11) 94755-9278
+          {{ phoneLabel }}
         </a>
       </div>
 
@@ -56,6 +56,16 @@
 </template>
 
 <script setup lang="ts">
+withDefaults(defineProps<{
+  whatsappHref?: string
+  phoneHref?: string
+  phoneLabel?: string
+}>(), {
+  whatsappHref: 'https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista',
+  phoneHref: 'tel:+5511947559278',
+  phoneLabel: '(11) 94755-9278',
+})
+
 useIntersectionReveal()
 </script>
 

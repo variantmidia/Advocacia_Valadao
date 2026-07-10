@@ -38,7 +38,7 @@
       <!-- CTA -->
       <div class="process__cta reveal reveal--delay-4">
         <a
-          href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
+          :href="whatsappHref"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn--gold btn--lg"
@@ -54,6 +54,12 @@
 </template>
 
 <script setup lang="ts">
+withDefaults(defineProps<{
+  whatsappHref?: string
+}>(), {
+  whatsappHref: 'https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista',
+})
+
 const steps = [
   {
     num: '01',

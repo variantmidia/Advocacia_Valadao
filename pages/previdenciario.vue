@@ -1,23 +1,38 @@
 <template>
   <div>
-    <AppHeader />
+    <AppHeader :whatsapp-href="previdenciarioWhatsappHref" />
 
     <main id="main-content">
       <HeroPrevidenciario />
       <ServicosPrevidenciario />
       <AboutPrevidenciario />
-      <ProcessSection />
+      <ProcessSection :whatsapp-href="previdenciarioWhatsappHref" />
       <ReviewsSection />
-      <OfficesSection />
-      <CTASection />
+      <OfficesSection
+        :unit1-whatsapp-href="previdenciarioUnit1WhatsappHref"
+        :unit2-whatsapp-href="previdenciarioWhatsappHref"
+      />
+      <CTASection
+        :whatsapp-href="previdenciarioWhatsappHref"
+        phone-href="tel:+5511942727198"
+        phone-label="(11) 94272-7198"
+      />
     </main>
 
-    <AppFooter />
+    <AppFooter
+      :whatsapp-href="previdenciarioWhatsappHref"
+      whatsapp-label="(11) 94272-7198"
+    />
     <AppWhatsAppPrevidenciario />
   </div>
 </template>
 
 <script setup lang="ts">
+const previdenciarioMessage = 'ola vim pelo site gostaria de falar com um Advogado previdenciário .'
+const previdenciarioWhatsappText = encodeURIComponent(previdenciarioMessage)
+const previdenciarioWhatsappHref = `https://wa.me/5511942727198?text=${previdenciarioWhatsappText}`
+const previdenciarioUnit1WhatsappHref = `https://wa.me/5511947559278?text=${previdenciarioWhatsappText}`
+
 useHead({
   title: 'Advogado Previdenciário em São Paulo | Wagner Valadão Advocacia',
   meta: [
@@ -102,7 +117,7 @@ useHead({
           legalName: 'Wagner Valadão Advocacia',
           image: 'https://advogadowagnervaladao.com.br/images/logo.png',
           url: 'https://advogadowagnervaladao.com.br/previdenciario',
-          telephone: '+5511947559278',
+          telephone: '+5511942727198',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Av. das Garoupas',

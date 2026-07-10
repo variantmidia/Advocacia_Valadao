@@ -53,7 +53,7 @@
             </ul>
 
             <a
-              href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
+              :href="unit1WhatsappHref"
               target="_blank"
               rel="noopener noreferrer"
               class="office-card__btn btn btn--outline"
@@ -95,7 +95,7 @@
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                 </svg>
-                <a href="tel:+5511947559278" itemprop="telephone">(11) 94755-9278</a>
+                <a :href="unit2PhoneHref" itemprop="telephone">{{ unit2PhoneLabel }}</a>
               </li>
               <li class="office-card__info-item">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -106,7 +106,7 @@
             </ul>
 
             <a
-              href="https://wa.me/5511942727198?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
+              :href="unit2WhatsappHref"
               target="_blank"
               rel="noopener noreferrer"
               class="office-card__btn btn btn--outline"
@@ -121,6 +121,18 @@
 </template>
 
 <script setup lang="ts">
+withDefaults(defineProps<{
+  unit1WhatsappHref?: string
+  unit2WhatsappHref?: string
+  unit2PhoneHref?: string
+  unit2PhoneLabel?: string
+}>(), {
+  unit1WhatsappHref: 'https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista',
+  unit2WhatsappHref: 'https://wa.me/5511942727198?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista',
+  unit2PhoneHref: 'tel:+5511942727198',
+  unit2PhoneLabel: '(11) 94272-7198',
+})
+
 useIntersectionReveal()
 </script>
 

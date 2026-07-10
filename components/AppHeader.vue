@@ -20,7 +20,7 @@
 
       <!-- CTA -->
       <a
-        href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
+        :href="whatsappHref"
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn--gold header__cta"
@@ -54,7 +54,7 @@
         <a href="#como-funciona" class="header__mobile-link" @click="menuOpen = false">Como Funciona</a>
         <a href="#unidades"      class="header__mobile-link" @click="menuOpen = false">Unidades</a>
         <a
-          href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
+          :href="whatsappHref"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn--gold header__mobile-cta"
@@ -67,6 +67,12 @@
 </template>
 
 <script setup lang="ts">
+withDefaults(defineProps<{
+  whatsappHref?: string
+}>(), {
+  whatsappHref: 'https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista',
+})
+
 const scrolled = ref(false)
 const menuOpen = ref(false)
 

@@ -22,7 +22,7 @@
             <p class="servico-card__desc">{{ servico.desc }}</p>
           </div>
           <a
-            href="https://wa.me/5511947559278?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20advogado%20previdenci%C3%A1rio."
+            href="https://wa.me/5511942727198?text=ola%20vim%20pelo%20site%20gostaria%20de%20falar%20com%20um%20Advogado%20previdenci%C3%A1rio%20."
             target="_blank"
             rel="noopener noreferrer"
             class="servico-card__link"
