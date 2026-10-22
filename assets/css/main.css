@@ -190,6 +190,19 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--color-gold-light);
 }
 
+a.btn:is([href^="https://wa.me/"], [href^="https://api.whatsapp.com/"], [href^="https://web.whatsapp.com/"]) {
+  background: #25D366;
+  border-color: #25D366;
+  color: #06060a;
+}
+
+a.btn:is([href^="https://wa.me/"], [href^="https://api.whatsapp.com/"], [href^="https://web.whatsapp.com/"]):hover {
+  background: #1EBE5D;
+  border-color: #1EBE5D;
+  color: #06060a;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.28);
+}
+
 .btn--lg {
   padding: 1.1em 2.8em;
   font-size: 0.78rem;
