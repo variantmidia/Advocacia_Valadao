@@ -14,10 +14,6 @@
           <div class="area-card__icon" aria-hidden="true" v-html="area.icon"></div>
           <h3 class="area-card__title">{{ area.title }}</h3>
           <p class="area-card__text">{{ area.desc }}</p>
-          <ul v-if="area.examples" class="area-card__examples">
-            <li v-for="example in area.examples" :key="example">{{ example }}</li>
-          </ul>
-          <p v-if="area.note" class="area-card__text">{{ area.note }}</p>
           <a
             href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
             target="_blank"
@@ -42,14 +38,7 @@ const areas = [
   },
   {
     title: 'Reversão de Justa Causa',
-    desc: 'A justa causa pode ser questionada quando a penalidade é aplicada de forma inadequada. Exemplos que merecem análise:',
-    examples: [
-      'Acusação de falta grave sem provas suficientes.',
-      'Justa causa por uma falha leve, sem proporcionalidade.',
-      'Advertência ou suspensão e demissão pelo mesmo fato.',
-      'Punição tardia, sem justificativa para a demora.',
-    ],
-    note: 'Nem toda justa causa pode ser revertida. Avaliamos os fatos e as provas. Faltas graves podem justificar demissão sem advertência prévia.',
+    desc: 'Acusação sem provas, punição desproporcional ou demissão pelo mesmo fato já punido? Avaliamos se a justa causa foi aplicada corretamente. A reversão depende das provas de cada caso.',
     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 14l-4-4 4-4"/><path d="M5 10h10a6 6 0 010 12"/></svg>',
   },
   {
@@ -103,18 +92,6 @@ useIntersectionReveal()
   margin-bottom: var(--space-xl);
 }
 
-.area-card__examples {
-  padding-left: 1.1rem;
-  margin-bottom: var(--space-md);
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.area-card__examples li + li {
-  margin-top: var(--space-xs);
-}
-
 .areas__subtitle {
   margin: 0 auto;
 }
@@ -123,15 +100,19 @@ useIntersectionReveal()
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: var(--color-border-subtle);
+  background: transparent;
 }
 
 .area-card {
   background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
   padding: var(--space-lg);
   transition: background var(--transition);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .area-card::after {
@@ -177,6 +158,7 @@ useIntersectionReveal()
 }
 
 .area-card__link {
+  margin-top: auto;
   font-family: var(--font-display);
   font-size: 0.6rem;
   letter-spacing: 0.15em;
@@ -187,6 +169,21 @@ useIntersectionReveal()
 
 .area-card__link:hover {
   color: var(--color-gold-light);
+}
+
+/* Balance the ten services into complete desktop rows: 3, 3, 2, 2. */
+@media (min-width: 769px) {
+  .areas__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .area-card {
+    grid-column: span 2;
+  }
+
+  .area-card:nth-last-child(-n + 4) {
+    grid-column: span 3;
+  }
 }
 
 @media (max-width: 768px) {
