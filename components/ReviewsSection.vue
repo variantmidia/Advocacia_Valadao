@@ -10,30 +10,51 @@
         </h2>
 
         <!-- Google badge -->
-        <div class="reviews__badge reveal reveal--delay-1" aria-label="Avaliação geral no Google">
+        <div class="reviews__badge reveal reveal--delay-1" aria-label="Avaliações no Google das duas unidades">
           <svg class="reviews__badge-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
             <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
             <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
             <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
           </svg>
-          <div class="reviews__badge-stars" aria-label="5 estrelas">
-            <span v-for="i in 5" :key="i" class="reviews__star reviews__star--filled" aria-hidden="true">★</span>
-          </div>
-          <span class="reviews__badge-score">5,0</span>
-          <span class="reviews__badge-sep" aria-hidden="true">·</span>
-          <span class="reviews__badge-count">+50 avaliações no Google</span>
+          <span class="reviews__badge-count">Mais de 100 avaliações no Google<br>somando as duas unidades</span>
         </div>
       </div>
 
+      <div class="reviews__controls">
+        <button
+          type="button"
+          class="reviews__motion-toggle"
+          :aria-pressed="isPaused"
+          :disabled="prefersReducedMotion"
+          :title="prefersReducedMotion ? 'Movimento reduzido ativado no dispositivo' : undefined"
+          @click="isPaused = !isPaused"
+        >
+          {{ isPaused ? 'Reproduzir' : 'Pausar' }}
+        </button>
+      </div>
+
       <!-- Cards track -->
-      <div class="reviews__track" role="list">
+      <div
+        class="reviews__viewport"
+        :class="{ 'is-paused': isPaused }"
+        tabindex="0"
+        role="region"
+        aria-label="Depoimentos de clientes"
+      >
+        <div class="reviews__track">
+          <div
+            v-for="copy in 2"
+            :key="copy"
+            class="reviews__group"
+            :role="copy === 1 ? 'list' : undefined"
+            :aria-hidden="copy === 2 ? 'true' : undefined"
+          >
         <article
-          v-for="(review, idx) in reviews"
+          v-for="review in reviews"
           :key="review.name"
-          class="review-card reveal"
-          :class="`reveal--delay-${(idx % 4) + 1}`"
-          role="listitem"
+          class="review-card"
+          :role="copy === 1 ? 'listitem' : undefined"
         >
           <!-- Top row: avatar + name + Google icon -->
           <div class="review-card__top">
@@ -45,7 +66,7 @@
 
             <div class="review-card__meta">
               <span class="review-card__name">{{ review.name }}</span>
-              <span class="review-card__date">{{ review.date }}</span>
+              <span class="review-card__date">Trecho da avaliação no Google</span>
             </div>
 
             <svg class="review-card__google" viewBox="0 0 24 24" aria-label="Google" role="img">
@@ -72,6 +93,8 @@
             <p>{{ review.text }}</p>
           </blockquote>
         </article>
+          </div>
+        </div>
       </div>
 
       <!-- CTA link -->
@@ -102,8 +125,20 @@ interface Review {
   color: string
   rating: number
   text: string
-  date: string
 }
+
+const isPaused = ref(false)
+const prefersReducedMotion = ref(false)
+let motionQuery: MediaQueryList | undefined
+const syncMotionPreference = () => { prefersReducedMotion.value = motionQuery?.matches ?? false }
+
+onMounted(() => {
+  motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+  syncMotionPreference()
+  motionQuery.addEventListener('change', syncMotionPreference)
+})
+
+onUnmounted(() => motionQuery?.removeEventListener('change', syncMotionPreference))
 
 const reviews: Review[] = [
   {
@@ -112,31 +147,20 @@ const reviews: Review[] = [
     color: '#4285F4',
     rating: 5,
     text: 'Fui bem atendida no primeiro contato. Destaco a agilidade e a atenção ao meu caso. Até o momento, experiência positiva.',
-    date: 'há 5 dias',
-  },
-  {
-    name: 'David Junior Rodrigues',
-    initial: 'D',
-    color: '#EA4335',
-    rating: 5,
-    text: 'O Dr. Valadão, com vasta experiência e expertise, elaborou a petição referente às dívidas em aberto junto ao banco. Graças à sua atuação técnica e estratégica, obtivemos êxito no caso.',
-    date: 'há 5 semanas',
   },
   {
     name: 'Rogerio Tadeu Alves Pereira',
     initial: 'R',
     color: '#34A853',
     rating: 5,
-    text: 'Trabalho sério e de excelência. Precisei dos serviços em processos e tive o retorno positivo! Parabéns pelo trabalho. Recomendo a todos.',
-    date: 'há 6 semanas',
+    text: 'Trabalho sério e de excelência.',
   },
   {
     name: 'Regiane Gouveia',
     initial: 'R',
     color: '#F4A025',
     rating: 5,
-    text: 'Atendimento excelente, rápido, prático e esclarecedor. Quer agilidade? Super indico. Minha audiência foi rápida e o resultado foi bom.',
-    date: 'há 6 semanas',
+    text: 'Atendimento excelente, rápido, prático e esclarecedor.',
   },
   {
     name: 'Cleia Gonçalves',
@@ -144,7 +168,6 @@ const reviews: Review[] = [
     color: '#8E44AD',
     rating: 5,
     text: 'Ótimo local, experiência bem atendida e com bom profissionalismo.',
-    date: 'há 6 semanas',
   },
 ]
 
@@ -153,6 +176,8 @@ useIntersectionReveal()
 
 <style scoped>
 .reviews {
+  --review-width: 340px;
+  --review-gap: 24px;
   background: var(--color-bg);
   overflow: hidden;
 }
@@ -172,7 +197,10 @@ useIntersectionReveal()
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   padding: 0.6rem 1.4rem;
-  border-radius: 100px;
+  border-radius: var(--radius);
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .reviews__badge-icon {
@@ -202,7 +230,7 @@ useIntersectionReveal()
 .reviews__badge-count {
   font-family: var(--font-display);
   font-size: 0.65rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
@@ -215,16 +243,73 @@ useIntersectionReveal()
 .reviews__star--filled { color: #FBBC05; }
 .reviews__star--empty  { color: rgba(251,188,5,0.2); }
 
-/* ── Cards grid ── */
+/* Equal groups make the ticker loop without a jump. */
+.reviews__viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+}
+
+.reviews__viewport:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
 .reviews__track {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-lg);
-  justify-content: center;
+  width: max-content;
+  animation: reviews-ticker 46s linear infinite;
+}
+
+.reviews__group {
+  display: flex;
+  gap: var(--review-gap);
+  padding-right: var(--review-gap);
+  flex-shrink: 0;
+  align-items: stretch;
+}
+
+.reviews__viewport:hover .reviews__track,
+.reviews__viewport:focus-within .reviews__track,
+.reviews__viewport.is-paused .reviews__track {
+  animation-play-state: paused;
+}
+
+@keyframes reviews-ticker {
+  to { transform: translateX(-50%); }
+}
+
+.reviews__controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-sm);
+}
+
+.reviews__motion-toggle {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.45rem 0.85rem;
+  min-width: 104px;
+  min-height: 44px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.reviews__motion-toggle:hover,
+.reviews__motion-toggle:focus-visible {
+  border-color: var(--color-gold);
+  color: var(--color-gold-light);
+}
+
+.reviews__motion-toggle:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 .review-card {
-  flex: 0 0 calc((100% - 2 * var(--space-lg)) / 3);
+  flex: 0 0 var(--review-width);
+  width: var(--review-width);
   min-width: 0;
 }
 
@@ -299,9 +384,9 @@ useIntersectionReveal()
   font-weight: 600;
   color: var(--color-cream);
   letter-spacing: 0.04em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  letter-spacing: 0;
 }
 
 .review-card__date {
@@ -384,20 +469,33 @@ useIntersectionReveal()
 }
 
 /* ── Responsive ── */
-@media (max-width: 1024px) {
+@media (max-width: 640px) {
+  .reviews {
+    --review-width: min(300px, calc(100vw - 64px));
+    --review-gap: 16px;
+  }
+
   .review-card {
-    flex: 0 0 calc((100% - var(--space-lg)) / 2);
+    padding: var(--space-md);
   }
 }
 
-@media (max-width: 640px) {
-  .reviews__track {
-    gap: var(--space-md);
+@media (prefers-reduced-motion: reduce) {
+  .reviews__viewport {
+    overflow-x: auto;
+    mask-image: none;
   }
 
-  .review-card {
-    flex: 0 0 100%;
-    padding: var(--space-md);
+  .reviews__track {
+    animation: none;
+  }
+
+  .reviews__group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .review-card:hover {
+    transform: none;
   }
 }
 </style>
