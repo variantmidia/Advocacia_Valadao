@@ -26,13 +26,12 @@
           <p class="prequal__desc reveal reveal--delay-2">
             Quanto mais tempo você esteve na empresa, maiores tendem a ser os direitos
             acumulados: FGTS, férias, 13º, horas extras, adicional noturno.<br><br>
-            Por isso, nosso foco é em casos com pelo menos 5 meses de empresa —
-            onde a orientação jurídica costuma trazer mais resultado real pra você.
+            Atendimento para trabalhadores com pelo menos 6 meses na mesma empresa
+            ou que sofreram acidente de trabalho.
           </p>
           <p class="prequal__note reveal reveal--delay-2">
-            Se você está no período de experiência ou trabalhou menos que isso e
-            acredita que sofreu uma injustiça grave, ainda assim vale a pena
-            descrever sua situação no WhatsApp pra avaliarmos juntos.
+            O tempo de empresa é um critério de atendimento do escritório,
+            não uma condição legal para ter direitos.
           </p>
           <a
             href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"

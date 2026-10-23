@@ -10,9 +10,8 @@
         <p class="label hero__label reveal">Advogado Trabalhista em São Paulo</p>
 
         <h1 class="hero__title reveal reveal--delay-1">
-          <span class="hero__title-line">Antes de Pedir Demissão,</span>
-          <span class="hero__title-line">Conte com um</span>
-          <span class="hero__title-line hero__title-line--gold">Advogado Trabalhista.</span>
+          <span class="hero__title-line">Com 6 meses ou mais na empresa</span>
+          <span class="hero__title-line hero__title-line--gold">e pensando em pedir demissão?</span>
         </h1>
 
         <div class="hero__ornament reveal reveal--delay-2" aria-hidden="true">
@@ -22,9 +21,23 @@
         </div>
 
         <p class="hero__text reveal reveal--delay-3">
-          Somos especialistas em fazer as empresas pagarem o que é seu por direito — rescisão indireta segura.<br>
-          Às vezes, uma consulta com um Advogado Trabalhista pode mudar completamente o que você tem direito a receber ao sair.<br>
-          Você não está sozinho.
+          Antes de decidir, entenda como a forma de saída pode afetar suas verbas trabalhistas.
+        </p>
+        <p class="hero__text reveal reveal--delay-3">
+          Salários atrasados, FGTS não depositado ou trabalho sem registro?
+          Avaliamos sua situação e os documentos disponíveis.
+        </p>
+        <p class="hero__qualification reveal reveal--delay-3">
+          Atendimento para trabalhadores com pelo menos 6 meses na mesma empresa
+          ou que sofreram acidente de trabalho.
+        </p>
+        <p class="hero__services reveal reveal--delay-3">
+          Rescisão indireta · Análise de justa causa · Reconhecimento de vínculo
+        </p>
+        <p class="hero__support reveal reveal--delay-3">Você não está sozinho.</p>
+        <p class="hero__criteria reveal reveal--delay-3">
+          O tempo de empresa é um critério de atendimento do escritório,
+          não uma condição legal para ter direitos.
         </p>
 
         <!-- Diferenciais -->
@@ -61,7 +74,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
             </svg>
-            Fale pelo WhatsApp
+            Conversar pelo WhatsApp
           </a>
           <a href="#rodape" class="btn btn--outline btn--lg">
             Áreas de Atuação
@@ -183,6 +196,9 @@ onMounted(() => {
 /* Content */
 .hero__content {
   max-width: 560px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__label {
@@ -192,9 +208,9 @@ onMounted(() => {
 }
 
 .hero__title {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: 1.9rem;
   font-weight: 900;
-  letter-spacing: 0.03em;
+  letter-spacing: 0;
   margin-bottom: var(--space-md);
   display: flex;
   flex-direction: column;
@@ -203,7 +219,7 @@ onMounted(() => {
 
 .hero__title-line {
   display: block;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .hero__title-line--gold {
@@ -239,11 +255,37 @@ onMounted(() => {
 }
 
 .hero__text {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--color-text-muted);
   max-width: 44ch;
-  margin-bottom: var(--space-lg);
-  line-height: 1.75;
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
+.hero__qualification {
+  color: var(--color-cream);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: var(--space-sm);
+}
+
+.hero__services {
+  color: var(--color-gold-light);
+  line-height: 1.5;
+  margin-bottom: var(--space-sm);
+}
+
+.hero__support {
+  color: var(--color-cream);
+  margin-bottom: var(--space-sm);
+}
+
+.hero__criteria {
+  order: 1;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
 }
 
 .hero__actions {
@@ -255,6 +297,7 @@ onMounted(() => {
 
 /* Office tags */
 .hero__offices {
+  order: 3;
   display: flex;
   gap: var(--space-md);
   flex-wrap: wrap;
@@ -277,6 +320,7 @@ onMounted(() => {
 
 /* Diferencias */
 .hero__diferencias {
+  order: 2;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -474,11 +518,11 @@ onMounted(() => {
 
   .hero__content {
     max-width: 100%;
-    order: 2;
+    order: 1;
   }
 
   .hero__photo-wrap {
-    order: 1;
+    order: 2;
     min-height: 260px;
     height: 56vw;
     max-height: 340px;
@@ -502,7 +546,7 @@ onMounted(() => {
   }
 
   .hero__title {
-    font-size: clamp(1.35rem, 5.5vw, 1.7rem);
+    font-size: 1.4rem;
     align-items: center;
   }
 
@@ -513,6 +557,13 @@ onMounted(() => {
 
   .hero__actions {
     justify-content: center;
+  }
+
+  .hero__actions .btn {
+    max-width: 100%;
+    padding: 1em 1.2em;
+    white-space: normal;
+    letter-spacing: 0;
   }
 
   .hero__offices {

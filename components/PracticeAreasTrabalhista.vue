@@ -14,6 +14,10 @@
           <div class="area-card__icon" aria-hidden="true" v-html="area.icon"></div>
           <h3 class="area-card__title">{{ area.title }}</h3>
           <p class="area-card__text">{{ area.desc }}</p>
+          <ul v-if="area.examples" class="area-card__examples">
+            <li v-for="example in area.examples" :key="example">{{ example }}</li>
+          </ul>
+          <p v-if="area.note" class="area-card__text">{{ area.note }}</p>
           <a
             href="https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista"
             target="_blank"
@@ -35,6 +39,18 @@ const areas = [
     title: 'Rescisão Indireta',
     desc: 'Quando o empregador comete falta grave, o trabalhador pode encerrar o contrato e receber todas as verbas rescisórias como em demissão sem justa causa.',
     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 000-8h-1"/><path d="M15 10l4 4-4 4"/><path d="M19 14H8a4 4 0 000 8h1"/></svg>',
+  },
+  {
+    title: 'Reversão de Justa Causa',
+    desc: 'A justa causa pode ser questionada quando a penalidade é aplicada de forma inadequada. Exemplos que merecem análise:',
+    examples: [
+      'Acusação de falta grave sem provas suficientes.',
+      'Justa causa por uma falha leve, sem proporcionalidade.',
+      'Advertência ou suspensão e demissão pelo mesmo fato.',
+      'Punição tardia, sem justificativa para a demora.',
+    ],
+    note: 'Nem toda justa causa pode ser revertida. Avaliamos os fatos e as provas. Faltas graves podem justificar demissão sem advertência prévia.',
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 14l-4-4 4-4"/><path d="M5 10h10a6 6 0 010 12"/></svg>',
   },
   {
     title: 'Vínculo MEI/PJ',
@@ -85,6 +101,18 @@ useIntersectionReveal()
 .areas__header {
   text-align: center;
   margin-bottom: var(--space-xl);
+}
+
+.area-card__examples {
+  padding-left: 1.1rem;
+  margin-bottom: var(--space-md);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.area-card__examples li + li {
+  margin-top: var(--space-xs);
 }
 
 .areas__subtitle {
