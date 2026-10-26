@@ -4,10 +4,15 @@
 
       <!-- Header -->
       <div class="reviews__header reveal">
-        <p class="label">Depoimentos</p>
-        <h2 id="reviews-title" class="section-title">
-          O que nossos clientes<br>falam sobre nós
+        <p class="label">Avaliações</p>
+        <h2 id="reviews-title" class="section-title reviews__title">
+          A confiança dos nossos clientes é construída em cada atendimento.
         </h2>
+        <p class="reviews__intro">
+          Na Advocacia Valadão, cada atendimento representa um compromisso com ética,
+          responsabilidade e atenção à sua história. As avaliações dos nossos clientes
+          refletem a dedicação em oferecer uma orientação próxima, clara e transparente.
+        </p>
 
         <!-- Google badge -->
         <div class="reviews__badge reveal reveal--delay-1" aria-label="Avaliações no Google das duas unidades">
@@ -189,6 +194,23 @@ useIntersectionReveal()
 .reviews__header {
   text-align: center;
   margin-bottom: var(--space-xl);
+}
+
+.reviews__title {
+  max-width: 28ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.reviews__intro {
+  max-width: 62ch;
+  margin: 0 auto var(--space-sm);
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 /* Google badge */
@@ -473,6 +495,10 @@ useIntersectionReveal()
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
+  .reviews__title {
+    font-size: 1.4rem;
+  }
+
   .reviews {
     --review-width: min(300px, calc(100vw - 64px));
     --review-gap: 16px;
