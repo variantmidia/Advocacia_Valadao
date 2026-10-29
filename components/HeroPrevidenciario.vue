@@ -6,12 +6,11 @@
     <div class="container hero__container">
       <!-- Left: Content -->
       <div class="hero__content">
-        <p class="label hero__label reveal">Advogado Previdenciário em São Paulo</p>
+        <p class="label hero__label reveal">Advocacia Previdenciária na Zona Sul de São Paulo — Dr. Wagner Valadão</p>
 
         <h1 class="hero__title reveal reveal--delay-1">
-          <span class="hero__title-line">Você Pagou o INSS</span>
-          <span class="hero__title-line">a Vida Toda.</span>
-          <span class="hero__title-line hero__title-line--gold">Se Ele Negou Seu Benefício,<br>É Hora de Recorrer.</span>
+          <span class="hero__title-line">Teve seu benefício negado pelo INSS</span>
+          <span class="hero__title-line hero__title-line--gold">ou quer dar entrada na sua aposentadoria com segurança?</span>
         </h1>
 
         <div class="hero__ornament reveal reveal--delay-2" aria-hidden="true">
@@ -21,7 +20,9 @@
         </div>
 
         <p class="hero__text reveal reveal--delay-3">
-          Aposentadoria negada, BPC/LOAS indeferido, tempo de contribuição não reconhecido — o INSS erra com frequência, e a maioria das pessoas aceita sem questionar. Uma conversa com um advogado previdenciário pode mudar completamente o resultado do seu caso.
+          Não enfrente a burocracia do INSS sozinho. Analisamos a carta de negativa,
+          cortes de Auxílio-Doença, BPC/LOAS e pedidos de Aposentadoria diretamente
+          pelo WhatsApp ou em nosso escritório.
         </p>
 
         <ul class="hero__diferencias reveal reveal--delay-3" aria-label="Nossos diferenciais">
@@ -44,6 +45,7 @@
         </ul>
 
         <div class="hero__actions reveal reveal--delay-4">
+          <div class="hero__contact">
           <a
             href="https://wa.me/5511942727198?text=ola%20vim%20pelo%20site%20gostaria%20de%20falar%20com%20um%20Advogado%20previdenci%C3%A1rio%20."
             target="_blank"
@@ -55,6 +57,12 @@
             </svg>
             Fale pelo WhatsApp
           </a>
+          <p class="hero__contact-note">
+            <span aria-hidden="true">🔒</span>
+            Clique para falar com nossa equipe jurídica no WhatsApp.
+            Atendimento humano, rápido e em linguagem simples.
+          </p>
+          </div>
           <a href="#servicos-prev" class="btn btn--outline btn--lg">
             Áreas de Atuação
           </a>
@@ -170,18 +178,22 @@ onMounted(() => {
 
 .hero__content {
   max-width: 560px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__label {
   animation-delay: 0.1s;
-  font-size: 0.9rem;
-  letter-spacing: 0.22em;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  line-height: 1.6;
 }
 
 .hero__title {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: 1.8rem;
   font-weight: 900;
-  letter-spacing: 0.03em;
+  letter-spacing: 0;
   margin-bottom: var(--space-md);
   display: flex;
   flex-direction: column;
@@ -190,7 +202,7 @@ onMounted(() => {
 
 .hero__title-line {
   display: block;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .hero__title-line--gold {
@@ -240,7 +252,21 @@ onMounted(() => {
   margin-bottom: var(--space-lg);
 }
 
+.hero__contact {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+
+.hero__contact-note {
+  max-width: 46ch;
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .hero__offices {
+  order: 2;
   display: flex;
   gap: var(--space-md);
   flex-wrap: wrap;
@@ -262,6 +288,7 @@ onMounted(() => {
 .hero__office-tag svg { color: var(--color-gold); }
 
 .hero__diferencias {
+  order: 1;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -485,13 +512,13 @@ onMounted(() => {
 
   .hero__content {
     max-width: 100%;
-    order: 2;
-    padding: var(--space-lg) var(--space-md) var(--space-xl);
+    order: 1;
+    padding: var(--space-sm) 0 var(--space-xl);
   }
 
   /* Mobile: imagem ocupa largura total e altura proporcional sem overflow */
   .hero__photo-wrap {
-    order: 1;
+    order: 2;
     width: 100%;
     min-height: unset;
     height: auto;
@@ -521,7 +548,7 @@ onMounted(() => {
   }
 
   .hero__title {
-    font-size: clamp(1.35rem, 5.5vw, 1.7rem);
+    font-size: 1.4rem;
     align-items: center;
   }
 
@@ -532,6 +559,18 @@ onMounted(() => {
 
   .hero__actions {
     justify-content: center;
+  }
+
+  .hero__actions .btn {
+    max-width: 100%;
+    padding: 1em 1.2em;
+    white-space: normal;
+    letter-spacing: 0;
+  }
+
+  .hero__contact-note {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero__offices {
