@@ -6,7 +6,7 @@
         <img src="/images/logo.png" alt="Wagner Valadão Advocacia" width="52" height="52" />
         <span class="header__brand">
           <span class="header__brand-name">Advocacia Valadão</span>
-          <span class="header__brand-sub">OAB/SP 267973</span>
+          <span v-if="showOab" class="header__brand-sub">OAB/SP 267973</span>
         </span>
       </a>
 
@@ -69,7 +69,9 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
   whatsappHref?: string
+  showOab?: boolean
 }>(), {
+  showOab: true,
   whatsappHref: 'https://wa.me/5511947559278?text=Vim%20pelo%20site%2C%20gostaria%20de%20falar%20com%20advogado%20trabalhista',
 })
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHeader :whatsapp-href="previdenciarioWhatsappHref" />
+    <AppHeader :whatsapp-href="previdenciarioWhatsappHref" :show-oab="false" />
 
     <main id="main-content">
       <HeroPrevidenciario />
@@ -10,7 +10,7 @@
       <ReviewsSection />
       <OfficesSection
         :unit1-whatsapp-href="previdenciarioUnit1WhatsappHref"
-        :unit2-whatsapp-href="previdenciarioWhatsappHref"
+        :unit2-whatsapp-href="previdenciarioUnit2WhatsappHref"
       />
       <CTASection
         :whatsapp-href="previdenciarioWhatsappHref"
@@ -30,7 +30,8 @@
 <script setup lang="ts">
 const previdenciarioMessage = 'ola vim pelo site gostaria de falar com um Advogado previdenciário .'
 const previdenciarioWhatsappText = encodeURIComponent(previdenciarioMessage)
-const previdenciarioWhatsappHref = `https://wa.me/5511942727198?text=${previdenciarioWhatsappText}`
+const previdenciarioWhatsappHref = `https://wa.me/5511947559278?text=${previdenciarioWhatsappText}`
+const previdenciarioUnit2WhatsappHref = `https://wa.me/5511942727198?text=${previdenciarioWhatsappText}`
 const previdenciarioUnit1WhatsappHref = `https://wa.me/5511947559278?text=${previdenciarioWhatsappText}`
 
 useHead({

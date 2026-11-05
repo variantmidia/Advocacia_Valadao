@@ -47,7 +47,7 @@
         <div class="hero__actions reveal reveal--delay-4">
           <div class="hero__contact">
           <a
-            href="https://wa.me/5511942727198?text=ola%20vim%20pelo%20site%20gostaria%20de%20falar%20com%20um%20Advogado%20previdenci%C3%A1rio%20."
+            href="https://wa.me/5511947559278?text=ola%20vim%20pelo%20site%20gostaria%20de%20falar%20com%20um%20Advogado%20previdenci%C3%A1rio%20."
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn--gold btn--lg"
@@ -104,18 +104,6 @@
             <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
           </svg>
           Análise em até 24h pelo WhatsApp
-        </div>
-        <div class="hero__badge">
-          <span class="hero__badge-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z"/>
-              <path d="M8.5 12l2.5 2.5 5-5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span>
-            <strong>Dr. Wagner Valadão</strong>
-            <em>OAB/SP 267.973</em>
-          </span>
         </div>
       </div>
     </div>
