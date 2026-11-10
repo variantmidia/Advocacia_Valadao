@@ -30,7 +30,7 @@
 <script setup lang="ts">
 const previdenciarioMessage = 'ola vim pelo site gostaria de falar com um Advogado previdenciário .'
 const previdenciarioWhatsappText = encodeURIComponent(previdenciarioMessage)
-const previdenciarioWhatsappHref = `https://wa.me/5511947559278?text=${previdenciarioWhatsappText}`
+const previdenciarioWhatsappHref = `https://wa.me/5511942727198?text=${previdenciarioWhatsappText}`
 const previdenciarioUnit2WhatsappHref = `https://wa.me/5511942727198?text=${previdenciarioWhatsappText}`
 const previdenciarioUnit1WhatsappHref = `https://wa.me/5511947559278?text=${previdenciarioWhatsappText}`
 

@@ -47,7 +47,7 @@
         <div class="hero__actions reveal reveal--delay-4">
           <div class="hero__contact">
           <a
-            href="https://wa.me/5511947559278?text=ola%20vim%20pelo%20site%20gostaria%20de%20falar%20com%20um%20Advogado%20previdenci%C3%A1rio%20."
+            href="https://wa.me/5511942727198?text=ola%20vim%20pelo%20site%20gostaria%20de%20falar%20com%20um%20Advogado%20previdenci%C3%A1rio%20."
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn--gold btn--lg"
